@@ -6,6 +6,7 @@ import androidx.compose.material.Column
 @Composable
 fun Pet(){
     Column {
+        Image("")
         Text("PET NAME")
         Text("Border")
         Text("Location")
