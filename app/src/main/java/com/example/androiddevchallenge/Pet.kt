@@ -15,14 +15,12 @@
  */
 package com.example.androiddevchallenge
 
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Surface
-import androidx.compose.material.Text
-import androidx.compose.material.Column
 import androidx.compose.material.Button
+import androidx.compose.material.Column
+import androidx.compose.material.Text
 
 @Composable
-fun Pet(){
+fun Pet() {
     Column {
         Image("")
         Text("PET NAME")
@@ -37,12 +35,13 @@ fun Pet(){
 
     Column {
         Text("Describe")
-        Button(onClick = { /* Do something! */ }, colors = ButtonDefaults.textButtonColors(
-            backgroundColor = Color.Red
-        )) {
+        Button(
+            onClick = { /* Do something! */ },
+            colors = ButtonDefaults.textButtonColors(
+                backgroundColor = Color.Red
+            )
+        ) {
             Text("Adopt")
         }
     }
-
-
 }

@@ -85,17 +85,17 @@ fun StaggeredVerticalGrid(
         }
 
         val height = colHeights.maxOrNull()?.coerceIn(constraints.minHeight, constraints.maxHeight)
-                ?: constraints.minHeight
+            ?: constraints.minHeight
         layout(
-                width = constraints.maxWidth,
-                height = height
+            width = constraints.maxWidth,
+            height = height
         ) {
             val colY = IntArray(columns) { 0 }
             placeables.forEach { placeable ->
                 val column = shortestColumn(colY)
                 placeable.place(
-                        x = columnWidth * column,
-                        y = colY[column]
+                    x = columnWidth * column,
+                    y = colY[column]
                 )
                 colY[column] += placeable.height
             }
