@@ -2,6 +2,7 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.material.Column
+import androidx.compose.material.Button
 
 @Composable
 fun Pet(){
@@ -19,7 +20,11 @@ fun Pet(){
 
     Column {
         Text("Describe")
-        Text("Button")
+        Button(onClick = { /* Do something! */ }, colors = ButtonDefaults.textButtonColors(
+            backgroundColor = Color.Red
+        )) {
+            Text("Adopt")
+        }
     }
 
 
