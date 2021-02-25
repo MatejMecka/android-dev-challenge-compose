@@ -45,6 +45,10 @@ fun SimpleNav() {
         composable("MyApp") {
             MyApp(navController)
         }
+        composable("Pet/{id}", arguments = listOf(navArgument("id") { type = NavType.IntType })) {
+            backStackEntry ->
+            Pet(navController, backStackEntry.arguments?.getString("id"))
+        }
     }
 }
 
@@ -78,6 +82,8 @@ fun PetRow(pet: Pet) {
         modifier = Modifier
             .padding(16.dp)
             .fillMaxWidth()
+            .clickable(onClick = { navController.navigate("friends") })
+
     ) {
         Column {
             Row(modifier = Modifier.padding(16.dp)) {

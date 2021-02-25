@@ -16,6 +16,7 @@
 package com.example.androiddevchallenge
 
 data class Pet(
+    val id: Int,
     val name: String,
     val type: String,
     val breed: String,
@@ -24,13 +25,13 @@ data class Pet(
 )
 
 val pets = arrayOf(
-    Pet("Jimmy", "Cat", "BengalCat", 17, "Male"),
-    Pet("Jane", "Dog", "Golden Retriever", 17, "Female"),
-    Pet("Julie", "Cat", "Mainee Coon", 17, "Female"),
-    Pet("Jimmy", "Dog", "German Shepherd Dog", 17, "Male"),
-    Pet("Jimmy", "Cat", "Persian Cat", 17, "Male"),
-    Pet("Jimmy", "Dog", "Beagle", 17, "Male"),
-    Pet("Jimmy", "Cat", "Scottish Fold", 17, "Male"),
-    Pet("Jimmy", "Dog", "Bulldog", 17, "Male"),
-    Pet("Jimmy", "Cat", "Bengal Cat", 17, "Male"),
+    Pet(1, "Jimmy", "Cat", "BengalCat", 17, "Male"),
+    Pet(2, "Jane", "Dog", "Golden Retriever", 17, "Female"),
+    Pet(3, "Julie", "Cat", "Mainee Coon", 17, "Female"),
+    Pet(4, "Jimmy", "Dog", "German Shepherd Dog", 17, "Male"),
+    Pet(5, "Jimmy", "Cat", "Persian Cat", 17, "Male"),
+    Pet(6, "Jimmy", "Dog", "Beagle", 17, "Male"),
+    Pet(7, "Jimmy", "Cat", "Scottish Fold", 17, "Male"),
+    Pet(8, "Jimmy", "Dog", "Bulldog", 17, "Male"),
+    Pet(9, "Jimmy", "Cat", "Bengal Cat", 17, "Male"),
 )
