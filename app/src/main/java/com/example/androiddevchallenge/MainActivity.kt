@@ -62,7 +62,7 @@ class MainActivity : AppCompatActivity() {
         setContent {
             MyTheme {
                 SimpleNav()
-            }   
+            }
         }
     }
 }
