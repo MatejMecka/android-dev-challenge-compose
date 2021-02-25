@@ -91,14 +91,7 @@ fun PetRow(pet: Pet, navController: NavController) {
 
     ) {
         Column {
-            Row(modifier = Modifier.padding(16.dp)) {
-                Text(pet.name, style = MaterialTheme.typography.subtitle1, textAlign = TextAlign.Left, modifier = Modifier.padding(24.dp))
-                Text(pet.type, style = MaterialTheme.typography.subtitle1, textAlign = TextAlign.Right,)
-            }
-            Row {
-                Text("Age: " + pet.age, style = MaterialTheme.typography.subtitle1, textAlign = TextAlign.Left, modifier = Modifier.padding(24.dp))
-                Text("Gender: " + pet.sex, style = MaterialTheme.typography.subtitle1, textAlign = TextAlign.Right,)
-            }
+                Text(pet.name, style = MaterialTheme.typography.heading, textAlign = TextAlign.Left, modifier = Modifier.padding(24.dp))
         }
     }
 }
