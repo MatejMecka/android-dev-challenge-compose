@@ -55,7 +55,7 @@ fun PetRow(pet: String) {
 }
 
 @Composable
-fun MessageList(pets: List<String>) {
+fun MessageList(pets: Array<String>) {
     Column {
         pets.forEach { message ->
             PetRow(message)
