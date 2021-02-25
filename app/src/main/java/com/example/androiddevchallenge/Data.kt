@@ -14,6 +14,7 @@
  * limitations under the License.
  */
 package com.example.androiddevchallenge
+
 import android.os.Parcelable
 import kotlinx.parcelize.Parcelize
 
@@ -24,9 +25,9 @@ data class Pet(
     val breed: String,
     val age: Int,
     val sex: String,
-) : Parcelable      
+) : Parcelable
 
-object Data = {
+object Data {
     val pets = listOf(
         Pet("Jimmy", "Cat", "", 17, "Male"),
         Pet("Jane", "Dog", "", 17, "Female"),
@@ -36,6 +37,6 @@ object Data = {
         Pet("Jimmy", "Dog", "", 17, "Male"),
         Pet("Jimmy", "Cat", "", 17, "Male"),
         Pet("Jimmy", "Dog", "", 17, "Male"),
-        Pet("Jimmy", "Cat", "", 17, "Male"),        
+        Pet("Jimmy", "Cat", "", 17, "Male"),
     )
 }
