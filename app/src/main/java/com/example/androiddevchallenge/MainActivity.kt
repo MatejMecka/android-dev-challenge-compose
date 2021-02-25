@@ -55,14 +55,14 @@ fun MyApp() {
 
 @Composable
 fun PetRow(pet: Pet) {
-    Card(backgroundColor = MaterialTheme.colors.background, elevation = 12.dp) {
+    Card(backgroundColor = MaterialTheme.colors.background, elevation = 12) {
         Row {
             Text(pet.name, style = MaterialTheme.typography.subtitle1, textAlign = TextAlign.Left,)
-            Text(pet.type, style = MaterialTheme.typography.subtitle1, textAlign = Right.Left,)
+            Text(pet.type, style = MaterialTheme.typography.subtitle1, textAlign = TextAlign.Right,)
         }
         Row {
             Text("Age:" + pet.age, style = MaterialTheme.typography.subtitle1, textAlign = TextAlign.Left,)
-            Text("Gender" + pet.gender, style = MaterialTheme.typography.subtitle1, textAlign = Right.Left,)
+            Text("Gender" + pet.sex, style = MaterialTheme.typography.subtitle1, textAlign = TextAlign.Right,)
         }
     }
 }
