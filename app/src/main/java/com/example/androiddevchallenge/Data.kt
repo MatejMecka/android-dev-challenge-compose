@@ -22,7 +22,7 @@ data class Pet(
     val age: Int,
     val sex: String,
 )
-
+    
 val pets = [
     Pet("Jimmy", "Cat", "", 17, "Male"),
     Pet("Jane", "Dog", "", 17, "Female"),
