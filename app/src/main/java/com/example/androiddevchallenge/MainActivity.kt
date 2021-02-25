@@ -58,7 +58,7 @@ fun MyApp() {
 fun PetRow(pet: Pet) {
     Card(
         backgroundColor = MaterialTheme.colors.background, elevation = 12.dp,
-        modifier = modifier
+        modifier = Modifier
             .padding(16.dp)
             .fillMaxWidth()
     ) {
