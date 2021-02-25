@@ -85,7 +85,7 @@ fun PetRow(pet: Pet, navController: NavController) {
         modifier = Modifier
             .padding(16.dp)
             .fillMaxWidth()
-            .clickable(onClick = { navController.navigate("Pet/" + pet.id-1) })
+            .clickable(onClick = { navController.navigate("Pet/" + pet.id - 1) })
 
     ) {
         Column {
