@@ -27,7 +27,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.androiddevchallenge.ui.theme.MyTheme
 
-var pets = arrayOf("Johnny", "Smt", "hello")
+var pets_array = arrayOf("Johnny", "Smt", "hello")
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -45,7 +45,7 @@ class MainActivity : AppCompatActivity() {
 fun MyApp() {
     Surface(color = MaterialTheme.colors.background) {
         Text(text = "Ready... Set... GO!")
-        MessageList(pets)
+        MessageList(pets_array)
     }
 }
 
