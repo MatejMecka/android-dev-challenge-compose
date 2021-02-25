@@ -29,7 +29,7 @@ fun Pet(id: Int) {
         Column {
             Row {
                 // Icon(Icons.filled.pet)
-                Text("Name: ${selected_pet.name}", style = MaterialTheme.typography.headline1)
+                Text("Name: ${selected_pet.name}", style = MaterialTheme.typography.h1)
             }
             Text("Age: ${selected_pet.age}", style = MaterialTheme.typography.subtitle1)
             Text("Type: ${selected_pet.type}", style = MaterialTheme.typography.subtitle1)
