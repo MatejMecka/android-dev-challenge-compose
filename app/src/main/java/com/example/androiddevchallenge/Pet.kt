@@ -23,7 +23,8 @@ import androidx.compose.runtime.Composable
 
 @Composable
 fun Pet(id: Int) {
-    pet = pets[id]
+    var selected_pet: Pet = pets[id]
+
     Column {
         Row {
             // Icon(Icons.filled.pet)
