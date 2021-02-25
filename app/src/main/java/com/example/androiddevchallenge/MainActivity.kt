@@ -62,13 +62,15 @@ fun PetRow(pet: Pet) {
             .padding(16.dp)
             .fillMaxWidth()
     ) {
-        Row {
-            Text(pet.name, style = MaterialTheme.typography.subtitle1, textAlign = TextAlign.Left,)
-            Text(pet.type, style = MaterialTheme.typography.subtitle1, textAlign = TextAlign.Right,)
-        }
-        Row {
-            Text("Age:" + pet.age, style = MaterialTheme.typography.subtitle1, textAlign = TextAlign.Left,)
-            Text("Gender" + pet.sex, style = MaterialTheme.typography.subtitle1, textAlign = TextAlign.Right,)
+        Column {
+            Row {
+                Text(pet.name, style = MaterialTheme.typography.subtitle1, textAlign = TextAlign.Left,)
+                Text(pet.type, style = MaterialTheme.typography.subtitle1, textAlign = TextAlign.Right,)
+            }
+            Row {
+                Text("Age:" + pet.age, style = MaterialTheme.typography.subtitle1, textAlign = TextAlign.Left,)
+                Text("Gender" + pet.sex, style = MaterialTheme.typography.subtitle1, textAlign = TextAlign.Right,)
+            }
         }
     }
 }
