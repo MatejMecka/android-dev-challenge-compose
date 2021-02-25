@@ -15,10 +15,6 @@
  */
 package com.example.androiddevchallenge
 
-import android.os.Parcelable
-import kotlinx.parcelize.Parcelize
-
-@Parcelize
 data class Pet(
     val name: String,
     val type: String,
@@ -27,16 +23,14 @@ data class Pet(
     val sex: String,
 ) : Parcelable
 
-object Data {
-    val pets = listOf(
-        Pet("Jimmy", "Cat", "", 17, "Male"),
-        Pet("Jane", "Dog", "", 17, "Female"),
-        Pet("Julie", "Cat", "", 17, "Female"),
-        Pet("Jimmy", "Dog", "", 17, "Male"),
-        Pet("Jimmy", "Cat", "", 17, "Male"),
-        Pet("Jimmy", "Dog", "", 17, "Male"),
-        Pet("Jimmy", "Cat", "", 17, "Male"),
-        Pet("Jimmy", "Dog", "", 17, "Male"),
-        Pet("Jimmy", "Cat", "", 17, "Male"),
-    )
-}
+val pets = [
+    Pet("Jimmy", "Cat", "", 17, "Male"),
+    Pet("Jane", "Dog", "", 17, "Female"),
+    Pet("Julie", "Cat", "", 17, "Female"),
+    Pet("Jimmy", "Dog", "", 17, "Male"),
+    Pet("Jimmy", "Cat", "", 17, "Male"),
+    Pet("Jimmy", "Dog", "", 17, "Male"),
+    Pet("Jimmy", "Cat", "", 17, "Male"),
+    Pet("Jimmy", "Dog", "", 17, "Male"),
+    Pet("Jimmy", "Cat", "", 17, "Male"),
+]
