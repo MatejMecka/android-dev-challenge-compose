@@ -49,7 +49,7 @@ fun SimpleNav() {
         composable("MyApp") {
             MyApp(navController)
         }
-        composable("Pet/{id}", arguments = listOf(navArgument("id"))) {
+        composable("Pet/{id}", arguments = listOf(navArgument("id") { type = NavType.IntType })) {
             backStackEntry ->
             Pet(backStackEntry.arguments?.getInt("id") ?: 0)
         }
@@ -62,7 +62,7 @@ class MainActivity : AppCompatActivity() {
         setContent {
             MyTheme {
                 SimpleNav()
-            }
+            }   
         }
     }
 }
