@@ -40,6 +40,8 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.navArgument
 import androidx.navigation.compose.rememberNavController
+import androidx.navigation.compose.navigate
+
 import com.example.androiddevchallenge.ui.theme.MyTheme
 
 @Composable
@@ -49,9 +51,9 @@ fun SimpleNav() {
         composable("MyApp") {
             MyApp(navController)
         }
-        composable("Pet/{id}", arguments = listOf(navArgument("id") { type = NavType.StringType })) {
+        composable("Pet/{id}", arguments = listOf(navArgument("id"))) {
             backStackEntry ->
-            Pet(backStackEntry.arguments?.getString("id", "0") ?: "0")
+            Pet(backStackEntry.arguments?.getInt("id") ?: 0)
         }
     }
 }
@@ -60,7 +62,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            MyTheme {
+            MyTheme {   
                 SimpleNav()
             }
         }
