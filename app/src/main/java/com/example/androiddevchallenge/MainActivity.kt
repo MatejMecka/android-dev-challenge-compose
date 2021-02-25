@@ -80,7 +80,7 @@ fun MyApp(navController: NavController) {
 }
 
 @Composable
-fun PetRow(pet: Pet, navController: NavController) {
+fun PetRow(pet: Pet) {
     Card(
         backgroundColor = MaterialTheme.colors.background, elevation = 12.dp,
         modifier = Modifier
