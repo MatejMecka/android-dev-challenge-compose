@@ -23,7 +23,7 @@ import androidx.compose.runtime.Composable
 
 @Composable
 fun Pet(id: Int) {
-    var selected_pet: Pet = pets[id - 1]
+    val selected_pet: Pet = pets[id - 1]
 
     Column {
         Row {
