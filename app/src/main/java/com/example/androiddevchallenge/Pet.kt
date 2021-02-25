@@ -18,6 +18,7 @@ package com.example.androiddevchallenge
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.material.Button
+import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 
@@ -28,15 +29,15 @@ fun Pet(id: Int) {
         Column {
             Row {
                 // Icon(Icons.filled.pet)
-                Text("Cat")
+                Text("Name: ${selected_pet.name}", style = MaterialTheme.typography.headline1)
             }
-            Text("Border")
-            Text("Location")
+            Text("Age: ${selected_pet.age}", style = MaterialTheme.typography.subtitle1)
+            Text("Type: ${selected_pet.type}", style = MaterialTheme.typography.subtitle1)
         }
 
         Column {
-            Text("Gender")
-            Text("Age")
+            Text("Gender", style = MaterialTheme.typography.subtitle1)
+            Text("Age", style = MaterialTheme.typography.subtitle1)
         }
 
         Column {
