@@ -34,7 +34,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.androiddevchallenge.ui.theme.MyTheme
 
-// val navController = rememberNavController()
+//val navController = rememberNavController()
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -68,13 +68,13 @@ fun PetRow(pet: Pet) {
             .fillMaxWidth()
     ) {
         Column {
-            Row {
-                Text(pet.name, style = MaterialTheme.typography.subtitle1, textAlign = TextAlign.Left,)
+            Row(modifier = Modifier.padding(16.dp)) {
+                Text(pet.name, style = MaterialTheme.typography.subtitle1, textAlign = TextAlign.Left, modifier = Modifier.padding(24.dp))
                 Text(pet.type, style = MaterialTheme.typography.subtitle1, textAlign = TextAlign.Right,)
             }
             Row {
-                Text("Age:" + pet.age, style = MaterialTheme.typography.subtitle1, textAlign = TextAlign.Left,)
-                Text("Gender" + pet.sex, style = MaterialTheme.typography.subtitle1, textAlign = TextAlign.Right,)
+                Text("Age: " + pet.age, style = MaterialTheme.typography.subtitle1, textAlign = TextAlign.Left, modifier = Modifier.padding(24.dp))
+                Text("Gender: " + pet.sex, style = MaterialTheme.typography.subtitle1, textAlign = TextAlign.Right,)
             }
         }
     }
