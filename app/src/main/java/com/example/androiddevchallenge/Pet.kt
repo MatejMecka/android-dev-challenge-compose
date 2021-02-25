@@ -24,7 +24,7 @@ import androidx.navigation.NavController
 
 @Composable
 fun Pet(navController: NavController, id: Int) {
-    var selected_pet: Pet = pets[id]
+    var selected_pet: Pet = pets[id-1]
 
     Column {
         Row {
