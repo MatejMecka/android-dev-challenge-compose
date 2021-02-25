@@ -24,7 +24,7 @@ import androidx.compose.runtime.Composable
 @Composable
 fun Pet(id: Int) {
     val selected_pet: Pet = pets[id - 1]
-    Column{
+    Column {
         Column {
             Row {
                 // Icon(Icons.filled.pet)
