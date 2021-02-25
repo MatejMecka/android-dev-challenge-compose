@@ -32,16 +32,28 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
+import androidx.navigation.compose.rememberNavController
 import com.example.androiddevchallenge.ui.theme.MyTheme
 
-// val navController = rememberNavController()
+@Composable
+fun SimpleNav() {
+    val navController = rememberNavController()
+    NavHost(navController, startDestination = "MyApp") { // this: NavGraphBuilder
+        composable("MyApp") {
+            MyApp(navController)
+        }
+    }
+}
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
             MyTheme {
-                MyApp()
+                SimpleNav()
             }
         }
     }
@@ -49,7 +61,7 @@ class MainActivity : AppCompatActivity() {
 
 // Start building your app here!
 @Composable
-fun MyApp() {
+fun MyApp(navController: NavController) {
     Surface(color = MaterialTheme.colors.background) {
         Column {
             TopAppBar(title = { Text("Adopt a Pet!") })

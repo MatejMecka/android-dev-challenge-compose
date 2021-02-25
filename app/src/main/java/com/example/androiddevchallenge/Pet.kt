@@ -22,7 +22,8 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 
 @Composable
-fun Pet(pet: Pet) {
+fun Pet(id: Int) {
+    pet = pets[id]
     Column {
         Row {
             // Icon(Icons.filled.pet)
