@@ -90,7 +90,7 @@ fun PetRow(pet: Pet, navController: NavController) {
 
     ) {
         Column {
-            Text(pet.name, style = MaterialTheme.typography.heading, textAlign = TextAlign.Left, modifier = Modifier.padding(24.dp))
+            Text(pet.name, style = MaterialTheme.typography.h1, textAlign = TextAlign.Left, modifier = Modifier.padding(24.dp))
         }
     }
 }
