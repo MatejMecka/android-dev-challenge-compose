@@ -23,7 +23,7 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.NavController
 
 @Composable
-fun Pet(navController: NavController, id: Int) {
+fun Pet(navController: NavController, id: Int?) {
     var selected_pet: Pet = pets[id]
 
     Column {
