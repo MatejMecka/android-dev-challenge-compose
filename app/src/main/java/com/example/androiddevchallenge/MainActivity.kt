@@ -24,13 +24,13 @@ import androidx.compose.material.Card
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
+import androidx.compose.material.TopAppBar
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.androiddevchallenge.ui.theme.MyTheme
-
-var pets_array = arrayOf("Johnny", "Smt", "hello")
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -48,7 +48,8 @@ class MainActivity : AppCompatActivity() {
 fun MyApp() {
     Surface(color = MaterialTheme.colors.background) {
         Column {
-            Text(text = "Ready... Set... GO!")
+            TopAppBar(title = { Text("Adopt a Pet!") })
+            // Text(text = "Ready... Set... GO!")
             MessageList(pets)
         }
     }
