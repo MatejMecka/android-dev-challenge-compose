@@ -105,7 +105,7 @@ fun MessageList(pets: Array<Pet>) {
 @Composable
 fun LightPreview() {
     MyTheme {
-        MyApp()
+        SimpleNav()
     }
 }
 
@@ -113,6 +113,6 @@ fun LightPreview() {
 @Composable
 fun DarkPreview() {
     MyTheme(darkTheme = true) {
-        MyApp()
+        SimpleNav()
     }
 }
