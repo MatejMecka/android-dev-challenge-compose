@@ -34,8 +34,10 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.NavType
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import androidx.compose.ui.semantics.onClick
 import com.example.androiddevchallenge.ui.theme.MyTheme
 
 @Composable
@@ -47,7 +49,7 @@ fun SimpleNav() {
         }
         composable("Pet/{id}", arguments = listOf(navArgument("id") { type = NavType.IntType })) {
             backStackEntry ->
-            Pet(navController, backStackEntry.arguments?.getString("id"))
+            Pet(navController, backStackEntry.arguments?.getInt("id"))
         }
     }
 }
@@ -76,7 +78,7 @@ fun MyApp(navController: NavController) {
 }
 
 @Composable
-fun PetRow(pet: Pet) {
+fun PetRow(pet: Pet, navController: NavController) {
     Card(
         backgroundColor = MaterialTheme.colors.background, elevation = 12.dp,
         modifier = Modifier
