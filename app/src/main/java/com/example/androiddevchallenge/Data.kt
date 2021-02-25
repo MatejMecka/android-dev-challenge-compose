@@ -21,7 +21,7 @@ data class Pet(
     val breed: String,
     val age: Int,
     val sex: String,
-) : Parcelable
+) 
 
 val pets = [
     Pet("Jimmy", "Cat", "", 17, "Male"),
