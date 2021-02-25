@@ -56,7 +56,12 @@ fun MyApp() {
 
 @Composable
 fun PetRow(pet: Pet) {
-    Card(backgroundColor = MaterialTheme.colors.background, elevation = 12.dp) {
+    Card(
+        backgroundColor = MaterialTheme.colors.background, elevation = 12.dp,
+        modifier = modifier
+            .padding(16.dp)
+            .fillMaxWidth()
+    ) {
         Row {
             Text(pet.name, style = MaterialTheme.typography.subtitle1, textAlign = TextAlign.Left,)
             Text(pet.type, style = MaterialTheme.typography.subtitle1, textAlign = TextAlign.Right,)
