@@ -22,7 +22,7 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 
 @Composable
-fun Pet(id: Int) {
+fun Pet(@PreviewParameter(SamplePetIdProvider::class) id: Int) {
     val selected_pet: Pet = pets[id - 1]
 
     Column {
@@ -47,4 +47,8 @@ fun Pet(id: Int) {
             Text("Adopt")
         }
     }
+}
+
+class SamplePetIdProvider : PreviewParameterProvider<Int> {
+    override val values = sequenceOf(1, 2)
 }
