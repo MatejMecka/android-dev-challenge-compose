@@ -86,11 +86,11 @@ fun PetRow(pet: Pet, navController: NavController) {
         modifier = Modifier
             .padding(16.dp)
             .fillMaxWidth()
-            .clickable(onClick = { navController.navigate("Pet/${1}") })
+            .clickable(onClick = { navController.navigate("Pet/${pet.id}") })
 
     ) {
         Column {
-            Text(pet.name, style = MaterialTheme.typography.h1, textAlign = TextAlign.Left, modifier = Modifier.padding(24.dp))
+            Text(pet.name, style = MaterialTheme.typography.h1, textAlign = TextAlign.Center, modifier = Modifier.padding(24.dp))
         }
     }
 }

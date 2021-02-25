@@ -29,19 +29,19 @@ fun Pet(id: Int) {
         Column {
             Row {
                 // Icon(Icons.filled.pet)
-                Text("Name: ${selected_pet.name}", style = MaterialTheme.typography.h1)
+                Text("Name: ${selected_pet.name}", style = MaterialTheme.typography.h1, color = MaterialTheme.colors.primary)
             }
-            Text("Age: ${selected_pet.age}", style = MaterialTheme.typography.subtitle1)
-            Text("Type: ${selected_pet.type}", style = MaterialTheme.typography.subtitle1)
+            Text("Age: ${selected_pet.age}", style = MaterialTheme.typography.subtitle1, color = MaterialTheme.colors.primary)
+            Text("Type: ${selected_pet.type}", style = MaterialTheme.typography.subtitle1, color = MaterialTheme.colors.primary)
         }
 
         Column {
-            Text("Gender", style = MaterialTheme.typography.subtitle1)
-            Text("Age", style = MaterialTheme.typography.subtitle1)
+            Text("Sex: ${selected_pet.sex}", style = MaterialTheme.typography.subtitle1, color = MaterialTheme.colors.primary)
+            Text("Age: ${selected_pet.age}", style = MaterialTheme.typography.subtitle1, color = MaterialTheme.colors.primary)
         }
 
         Column {
-            Text("Lorem ipsum sit dolor amet")
+            Text("This is a really cute pet. You can make it a part of your life by adopting it :)")
             Button(
                 onClick = { /* Do something! */ },
             ) {
