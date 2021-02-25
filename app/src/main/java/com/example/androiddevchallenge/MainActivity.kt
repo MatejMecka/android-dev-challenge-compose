@@ -44,23 +44,25 @@ class MainActivity : AppCompatActivity() {
 @Composable
 fun MyApp() {
     Surface(color = MaterialTheme.colors.background) {
-        Text(text = "Ready... Set... GO!")
-        MessageList(pets_array)
+        Column {
+            Text(text = "Ready... Set... GO!")
+            MessageList(pets)
+        }
     }
 }
 
 @Composable
-fun PetRow(pet: String) {
+fun PetRow(pet: Pet) {
     Row {
-        Text(pet)
+        Text(pet.name, style = MaterialTheme.typography.subtitle1, textAlign = TextAlign.Left,)
     }
 }
 
 @Composable
-fun MessageList(pets: Array<String>) {
+fun MessageList(pets: Array<Pet>) {
     Column {
-        pets.forEach { message ->
-            PetRow(message)
+        pets.forEach { animal ->
+            PetRow(animal)
         }
     }
 }
