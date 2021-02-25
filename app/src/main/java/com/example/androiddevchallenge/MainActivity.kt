@@ -20,7 +20,6 @@ import androidx.activity.compose.setContent
 import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.Card
@@ -91,7 +90,7 @@ fun PetRow(pet: Pet, navController: NavController) {
 
     ) {
         Column {
-                Text(pet.name, style = MaterialTheme.typography.heading, textAlign = TextAlign.Left, modifier = Modifier.padding(24.dp))
+            Text(pet.name, style = MaterialTheme.typography.heading, textAlign = TextAlign.Left, modifier = Modifier.padding(24.dp))
         }
     }
 }
