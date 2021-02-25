@@ -23,14 +23,14 @@ data class Pet(
     val sex: String,
 )
 
-val pets = [
-    Pet("Jimmy", "Cat", "", 17, "Male"),
-    Pet("Jane", "Dog", "", 17, "Female"),
-    Pet("Julie", "Cat", "", 17, "Female"),
-    Pet("Jimmy", "Dog", "", 17, "Male"),
-    Pet("Jimmy", "Cat", "", 17, "Male"),
-    Pet("Jimmy", "Dog", "", 17, "Male"),
-    Pet("Jimmy", "Cat", "", 17, "Male"),
-    Pet("Jimmy", "Dog", "", 17, "Male"),
-    Pet("Jimmy", "Cat", "", 17, "Male"),
-]
+val pets = arrayOf(
+    Pet("Jimmy", "Cat", "BengalCat", 17, "Male"),
+    Pet("Jane", "Dog", "Golden Retriever", 17, "Female"),
+    Pet("Julie", "Cat", "Mainee Coon", 17, "Female"),
+    Pet("Jimmy", "Dog", "German Shepherd Dog", 17, "Male"),
+    Pet("Jimmy", "Cat", "Persian Cat", 17, "Male"),
+    Pet("Jimmy", "Dog", "Beagle", 17, "Male"),
+    Pet("Jimmy", "Cat", "Scottish Fold", 17, "Male"),
+    Pet("Jimmy", "Dog", "Bulldog", 17, "Male"),
+    Pet("Jimmy", "Cat", "Bengal Cat", 17, "Male"),
+)
