@@ -27,6 +27,7 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
 import com.example.androiddevchallenge.ui.theme.MyTheme
 
 var pets_array = arrayOf("Johnny", "Smt", "hello")
@@ -55,7 +56,7 @@ fun MyApp() {
 
 @Composable
 fun PetRow(pet: Pet) {
-    Card(backgroundColor = MaterialTheme.colors.background, elevation = 12) {
+    Card(backgroundColor = MaterialTheme.colors.background, elevation = 12.dp) {
         Row {
             Text(pet.name, style = MaterialTheme.typography.subtitle1, textAlign = TextAlign.Left,)
             Text(pet.type, style = MaterialTheme.typography.subtitle1, textAlign = TextAlign.Right,)
