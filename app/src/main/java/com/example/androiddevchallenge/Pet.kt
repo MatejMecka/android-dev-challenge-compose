@@ -20,10 +20,12 @@ import androidx.compose.material.Column
 import androidx.compose.material.Text
 
 @Composable
-fun Pet() {
+fun Pet(pet: Pet) {
     Column {
-        Image("")
-        Text("PET NAME")
+        Row {
+            Icon(Icons.filled.pet)
+            Text("Cat")
+        }
         Text("Border")
         Text("Location")
     }
