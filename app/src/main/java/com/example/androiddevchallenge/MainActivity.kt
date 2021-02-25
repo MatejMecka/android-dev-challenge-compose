@@ -22,6 +22,7 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.Card
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
@@ -97,8 +98,8 @@ fun PetRow(pet: Pet, navController: NavController) {
 
 @Composable
 fun MessageList(pets: Array<Pet>, navController: NavController) {
-    Column {
-        pets.forEach { animal ->
+    LazyColumn(Modifier.fillMaxWidth()) {
+        items(pets) { animal ->
             PetRow(animal, navController)
         }
     }

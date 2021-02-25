@@ -41,7 +41,7 @@ fun Pet(id: Int) {
         }
 
         Column {
-            Text("This is a really cute pet. You can make it a part of your life by adopting it :)")
+            Text("This is a really cute pet. You can make it a part of your life by adopting it :)", style = MaterialTheme.typography.subtitle1, color = MaterialTheme.colors.primary)
             Button(
                 onClick = { /* Do something! */ },
             ) {
