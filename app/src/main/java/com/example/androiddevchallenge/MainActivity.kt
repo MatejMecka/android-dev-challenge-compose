@@ -50,7 +50,7 @@ fun SimpleNav() {
         }
         composable("Pet/{id}", arguments = listOf(navArgument("id") { type = NavType.IntType })) {
             backStackEntry ->
-            Pet(navController, backStackEntry.arguments?.getInt("id"))
+            Pet(navController, backStackEntry.arguments?.getInt("id") ?: 0)
         }
     }
 }
