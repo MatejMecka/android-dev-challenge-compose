@@ -27,7 +27,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.androiddevchallenge.ui.theme.MyTheme
 
-var pets = ArrayOf("Johnny", "Smt", "hello")
+var pets = arrayOf("Johnny", "Smt", "hello")
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
