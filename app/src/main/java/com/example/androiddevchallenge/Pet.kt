@@ -15,10 +15,9 @@
  */
 package com.example.androiddevchallenge
 
-/* 
 @Composable
-fun Pet(id: Int) {
-    val selected_pet: Pet = pets[id - 1]
+fun Pet(id: String) {
+    val selected_pet: Pet = pets[id.toInt() - 1]
 
     Column {
         Row {
@@ -42,4 +41,4 @@ fun Pet(id: Int) {
             Text("Adopt")
         }
     }
-} */
+}

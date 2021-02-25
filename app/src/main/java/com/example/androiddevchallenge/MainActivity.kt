@@ -49,9 +49,9 @@ fun SimpleNav() {
         composable("MyApp") {
             MyApp(navController)
         }
-        composable("Pet/{id}", arguments = listOf(navArgument("id") { type = NavType.IntType })) {
+        composable("Pet/{id}", arguments = listOf(navArgument("id") { type = NavType.StringType })) {
             backStackEntry ->
-            Pet(backStackEntry.arguments?.getInt("id") ?: 0)
+            Pet(backStackEntry.arguments?.getString("id", "0"))
         }
     }
 }
@@ -124,33 +124,5 @@ fun LightPreview() {
 fun DarkPreview() {
     MyTheme(darkTheme = true) {
         SimpleNav()
-    }
-}
-
-@Composable
-fun Pet(id: Int) {
-    val selected_pet: Pet = pets[id - 1]
-
-    Column {
-        Row {
-            // Icon(Icons.filled.pet)
-            Text("Cat")
-        }
-        Text("Border")
-        Text("Location")
-    }
-
-    Column {
-        Text("Gender")
-        Text("Age")
-    }
-
-    Column {
-        Text("Lorem ipsum sit dolor amet")
-        Button(
-            onClick = { /* Do something! */ },
-        ) {
-            Text("Adopt")
-        }
     }
 }
