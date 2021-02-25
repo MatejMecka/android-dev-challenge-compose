@@ -20,7 +20,6 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.material.Button
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
-import androidx.navigation.NavController
 
 @Composable
 fun Pet(id: Int) {
