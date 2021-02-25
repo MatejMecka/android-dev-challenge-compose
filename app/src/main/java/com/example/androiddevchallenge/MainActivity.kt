@@ -74,13 +74,13 @@ fun MyApp(navController: NavController) {
         Column {
             TopAppBar(title = { Text("Adopt a Pet!") })
             // Text(text = "Ready... Set... GO!")
-            MessageList(pets)
+            MessageList(pets, navController)
         }
     }
 }
 
 @Composable
-fun PetRow(pet: Pet) {
+fun PetRow(pet: Pet, navController: NavController) {
     Card(
         backgroundColor = MaterialTheme.colors.background, elevation = 12.dp,
         modifier = Modifier
@@ -103,10 +103,10 @@ fun PetRow(pet: Pet) {
 }
 
 @Composable
-fun MessageList(pets: Array<Pet>) {
+fun MessageList(pets: Array<Pet>, navController: NavController) {
     Column {
         pets.forEach { animal ->
-            PetRow(animal)
+            PetRow(animal, navController)
         }
     }
 }
