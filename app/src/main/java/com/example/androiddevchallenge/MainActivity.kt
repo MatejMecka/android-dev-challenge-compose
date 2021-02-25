@@ -126,3 +126,31 @@ fun DarkPreview() {
         SimpleNav()
     }
 }
+
+@Composable
+fun Pet(id: Int) {
+    val selected_pet: Pet = pets[id - 1]
+
+    Column {
+        Row {
+            // Icon(Icons.filled.pet)
+            Text("Cat")
+        }
+        Text("Border")
+        Text("Location")
+    }
+
+    Column {
+        Text("Gender")
+        Text("Age")
+    }
+
+    Column {
+        Text("Lorem ipsum sit dolor amet")
+        Button(
+            onClick = { /* Do something! */ },
+        ) {
+            Text("Adopt")
+        }
+    }
+}

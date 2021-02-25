@@ -15,12 +15,7 @@
  */
 package com.example.androiddevchallenge
 
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
-import androidx.compose.material.Button
-import androidx.compose.material.Text
-import androidx.compose.runtime.Composable
-
+/* 
 @Composable
 fun Pet(id: Int) {
     val selected_pet: Pet = pets[id - 1]
@@ -47,4 +42,4 @@ fun Pet(id: Int) {
             Text("Adopt")
         }
     }
-}
+} */
